@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerActivityLogin"
+    android:background="@color/Azul"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Reserve.ReserveActivity">
+
+    <!--tools:context=".ui.login.LoginActivity">-->
+    <!--
+    ************************
+          BOTÓN ATRÁS
+    ************************
+    -->
+    <ImageView
+        android:id="@+id/btAtras"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="-6dp"
+        android:src="@drawable/galonizquierdo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/stringIconoAtras" />
+
+    <!--
+    ************************
+        DATOS NECESARIOS
+    ************************
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conjuntoReserve"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.35"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbReserva"
+
+            android:text="@string/string_datosReserva"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:lines="2"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!--
+            ************************
+                EDIT TEXT DE DATOS
+            ************************
+        -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conjunto_datos"
+
+            android:background="@drawable/rectangulo2"
+            android:padding="10dp"
+
+            app:layout_constraintStart_toStartOf="@id/conjuntoReserve"
+            app:layout_constraintEnd_toEndOf="@id/conjuntoReserve"
+            app:layout_constraintTop_toBottomOf="@id/lbReserva"
+            app:layout_constraintBottom_toTopOf="@id/sw_mayor18"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etNombre"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="15dp"
+
+                android:autofillHints="name"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:inputType="textPersonName"
+                android:hint="@string/string_nombre"
+                android:minHeight="48dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/conjunto_datos"
+                app:layout_constraintBottom_toTopOf="@id/etApellidos"/>
+
+            <EditText
+                android:id="@+id/etApellidos"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="15dp"
+
+                android:autofillHints="name"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="@string/string_apellidos"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etNombre" />
+
+            <EditText
+                android:id="@+id/etDNI"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="15dp"
+
+                android:inputType="text"
+                android:maxLength="9"
+
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+
+                android:hint="@string/string_dni"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etApellidos"
+                android:autofillHints="12345678X" />
+
+            <EditText
+                android:id="@+id/etTelefono"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="15dp"
+
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+
+                android:inputType="phone"
+                android:autofillHints="phone"
+                android:hint="@string/string_telefono"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDNI" />
+
+            <EditText
+                android:id="@+id/etfechEntrada"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="15dp"
+
+                android:inputType="date"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="@string/string_fechaEntr"
+                android:focusable="false"
+                android:clickable="true"
+                android:maxLines="1"
+
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etTelefono"
+                tools:ignore="Autofill,KeyboardInaccessibleWidget" />
+
+            <EditText
+                android:id="@+id/etfechSalida"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="15dp"
+
+                android:inputType="date"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="@string/string_fechSalida"
+                android:minHeight="48dp"
+                android:focusable="false"
+                android:clickable="true"
+                android:maxLines="1"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etfechEntrada"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Switch
+            android:id="@+id/sw_mayor18"
+
+            android:textColor="@color/white"
+            android:text="@string/string_confMayor18"
+            android:checked="false"
+
+
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conjunto_datos"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:id="@+id/sw_condiciones"
+
+            android:textColor="@color/white"
+            android:text="@string/string_condiciones"
+            android:checked="false"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sw_mayor18"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+        ************************
+             BOTÓN RESERVAR
+        ************************
+    -->
+    <Button
+        android:id="@+id/btReservar"
+        android:text="@string/string_reservar"
+        android:textColor="@color/Azul"
+        android:background="@color/Verde"
+
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/conjuntoEmpresa"
+        app:layout_constraintTop_toBottomOf="@id/conjuntoReserve"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+    <!--
+        ************************
+           LOGO Y MARCA SIMPLES
+        ************************
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conjuntoEmpresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/nomEmpresa"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="5dp"
+            android:text="@string/empresa"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo_empresa"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo_empresa"
+            android:src="@drawable/logosimpleblanco"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/string_logoEmpresa" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

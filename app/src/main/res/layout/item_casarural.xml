@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="10dp"
+    android:elevation="5dp"
+    app:contentPadding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+           ************************
+                     GUÍAS
+           ************************
+        -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_item"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--
+           ************************
+                    IMAGEN
+           ************************
+        -->
+        <ImageView
+            android:id="@+id/iv_imageCasa"
+
+            android:src="@drawable/casa"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guide_item"
+
+            app:layout_constraintWidth_percent="0.37"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintDimensionRatio="h,1:1"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <!--
+           ************************
+               NOMBRE CASA RURAL
+           ************************
+        -->
+        <TextView
+            android:id="@+id/tvNombreCasaRural"
+
+            tools:text="Nombre de la Casa Rural"
+            android:maxLines="2"
+            android:minLines="1"
+
+            android:layout_marginTop="5dp"
+
+            app:layout_constraintStart_toEndOf="@id/guide_item"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/conjunto_Caracteristicas"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <!--
+           ************************
+                     PRECIO
+           ************************
+        -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conjunto_Precio"
+
+            android:layout_marginEnd="10dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreCasaRural"
+            app:layout_constraintBottom_toTopOf="@id/conjunto_Valoracion"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPrecio"
+
+                app:layout_constraintStart_toStartOf="@id/conjunto_Precio"
+                app:layout_constraintEnd_toStartOf="@id/tvEurosnoche"
+                app:layout_constraintTop_toTopOf="@id/conjunto_Precio"
+                app:layout_constraintBottom_toBottomOf="@id/conjunto_Precio"
+
+                tools:text="200"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvEurosnoche"
+
+
+                app:layout_constraintStart_toEndOf="@id/tvPrecio"
+                app:layout_constraintEnd_toEndOf="@id/conjunto_Precio"
+                app:layout_constraintTop_toTopOf="@id/conjunto_Precio"
+                app:layout_constraintBottom_toBottomOf="@id/conjunto_Precio"
+
+                android:text="@string/string_eurosXnoche"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--
+           ************************
+               CARACTERÍSTICAS
+           ************************
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/conjunto_Caracteristicas"
+
+            app:layout_constraintStart_toStartOf="@id/guide_item"
+            app:layout_constraintEnd_toStartOf="@id/conjunto_Precio"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreCasaRural"
+            app:layout_constraintBottom_toTopOf="@id/conjunto_Ubicacion"
+            app:layout_constraintHorizontal_bias="0"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvCapacidadNumero"
+
+                android:textSize="16sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvNumeroCamas"
+
+
+                tools:text="5" />
+
+            <ImageView
+                android:id="@+id/imPersonas"
+
+                android:layout_width="18sp"
+                android:layout_height="18sp"
+
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+
+
+                android:src="@drawable/personas"
+
+                app:layout_constraintStart_toEndOf="@id/tvCapacidadNumero"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tvCapacidadNumero"
+
+                app:layout_constraintVertical_bias="0.75" />
+
+            <TextView
+                android:id="@+id/tvNumeroCamas"
+
+                android:textSize="16sp"
+
+                android:layout_marginTop="3dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imDormitorio"
+                app:layout_constraintTop_toBottomOf="@id/tvCapacidadNumero"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="5" />
+
+            <ImageView
+                android:id="@+id/imDormitorio"
+
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+
+                android:src="@drawable/habitaciones"
+
+                app:layout_constraintStart_toEndOf="@id/tvNumeroCamas"
+                app:layout_constraintEnd_toStartOf="@id/tvBañosNumero"
+                app:layout_constraintTop_toTopOf="@id/tvNumeroCamas"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
+
+            <TextView
+                android:id="@+id/tvBañosNumero"
+
+                android:textSize="16sp"
+
+                app:layout_constraintBaseline_toBaselineOf="@id/tvNumeroCamas"
+                app:layout_constraintStart_toEndOf="@id/imDormitorio"
+                app:layout_constraintEnd_toStartOf="@id/tvBañosNumero"
+                app:layout_constraintTop_toBottomOf="@id/tvCapacidadNumero"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                tools:text="1" />
+
+            <ImageView
+                android:id="@+id/imBanno"
+
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+
+                android:src="@drawable/banno"
+
+                app:layout_constraintStart_toEndOf="@id/tvBañosNumero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvBañosNumero"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--
+           ************************
+                  UBICACIÓN
+           ************************
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conjunto_Ubicacion"
+
+            app:layout_constraintStart_toStartOf="@id/guide_item"
+            app:layout_constraintTop_toBottomOf="@id/conjunto_Caracteristicas"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imUbicacion"
+
+                android:src="@drawable/ubicacion"
+
+                app:layout_constraintStart_toStartOf="@id/conjunto_Ubicacion"
+                app:layout_constraintEnd_toStartOf="@id/tvUbicacion"
+                app:layout_constraintTop_toTopOf="@id/conjunto_Ubicacion"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvUbicacion"
+
+                android:textSize="12sp"
+
+                android:maxLines="2"
+                android:minLines="1"
+
+                app:layout_constraintStart_toEndOf="@id/imUbicacion"
+                app:layout_constraintEnd_toEndOf="@id/conjunto_Ubicacion"
+                app:layout_constraintTop_toTopOf="@id/conjunto_Ubicacion"
+                app:layout_constraintBottom_toBottomOf="@id/conjunto_Ubicacion"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Ubicación" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--
+           ************************
+                  VALORACIÓN
+           ************************
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conjunto_Valoracion"
+
+            android:layout_marginEnd="10dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conjunto_Caracteristicas"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imValoracionEstrella"
+
+                android:src="@drawable/estrella2"
+
+                app:layout_constraintStart_toEndOf="@id/tvCalificacion"
+                app:layout_constraintEnd_toEndOf="@id/conjunto_Valoracion"
+                app:layout_constraintTop_toTopOf="@id/conjunto_Valoracion"
+                app:layout_constraintBottom_toBottomOf="@id/conjunto_Valoracion"
+
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tvCalificacion"
+
+                android:textSize="15sp"
+                android:layout_marginEnd="4dp"
+
+                app:layout_constraintStart_toStartOf="@id/conjunto_Valoracion"
+                app:layout_constraintEnd_toStartOf="@id/imValoracionEstrella"
+                app:layout_constraintTop_toTopOf="@id/conjunto_Valoracion"
+                app:layout_constraintBottom_toBottomOf="@id/conjunto_Valoracion"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

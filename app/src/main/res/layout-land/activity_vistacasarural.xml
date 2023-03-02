@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VistaCasaRural.VistaCasaRuralActivity">
+
+    <!--
+       ************************
+                 GUÍAS
+       ************************
+    -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--
+        ************************
+              BOTÓN ATRÁS
+        ************************
+    -->
+
+    <ImageView
+        android:id="@+id/btAtras"
+        android:src="@drawable/galonizquierdo"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+    <!--
+        ************************
+             CARRUSEL FOTOS
+        ************************
+    -->
+    <ImageView
+        android:id="@+id/btIzquierda"
+
+        android:src="@drawable/iconoizquierda"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivPortada"
+        app:layout_constraintBottom_toBottomOf="@id/ivPortada"
+        app:layout_constraintTop_toTopOf="@id/ivPortada"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <ImageView
+        android:id="@+id/ivPortada"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btAtras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide"
+
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintDimensionRatio="h,1:1"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <ImageView
+        android:id="@+id/btDerecha"
+
+        android:src="@drawable/iconoderecha"
+
+        app:layout_constraintStart_toEndOf="@id/ivPortada"
+        app:layout_constraintEnd_toEndOf="@id/guide"
+        app:layout_constraintBottom_toBottomOf="@id/ivPortada"
+        app:layout_constraintTop_toTopOf="@id/ivPortada"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <!--
+        ************************
+               NOMBRE CASA
+        ************************
+    -->
+    <TextView
+        android:id="@+id/tvNombreCasaRural"
+        tools:text="Nombre de la casa"
+        android:textColor="@color/Azul"
+
+        android:lines="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:maxLines="4"
+        android:minLines="2"
+
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/conjunto_Ubicacion"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+        ************************
+                UBICACIÓN
+        ************************
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/conjunto_Ubicacion"
+
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreCasaRural"
+        app:layout_constraintBottom_toTopOf="@id/TableLayout"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imUbicacion"
+
+            android:src="@drawable/ubicacion"
+
+            app:layout_constraintStart_toStartOf="@id/conjunto_Ubicacion"
+            app:layout_constraintEnd_toStartOf="@id/tvUbicacion"
+            app:layout_constraintTop_toTopOf="@id/conjunto_Ubicacion"
+            app:layout_constraintBottom_toBottomOf="@id/conjunto_Ubicacion"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvUbicacion"
+
+            android:textSize="15sp"
+
+            android:maxLines="2"
+            android:minLines="1"
+
+            app:layout_constraintStart_toEndOf="@id/imUbicacion"
+            app:layout_constraintEnd_toEndOf="@id/conjunto_Ubicacion"
+            app:layout_constraintTop_toTopOf="@id/conjunto_Ubicacion"
+            app:layout_constraintBottom_toBottomOf="@id/conjunto_Ubicacion"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="Ubicación" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+        ************************
+             CARACTERÍSTICAS
+        ************************
+    -->
+    <TableLayout
+        android:id="@+id/TableLayout"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintTop_toBottomOf="@id/conjunto_Ubicacion"
+        app:layout_constraintBottom_toTopOf="@id/tvvalorar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tvVisionGeneral"
+
+                android:text="@string/string_visionGeneral"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TableLayout
+                android:id="@+id/tlVisionGneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/tvDormitorios"
+
+                        android:text="@string/string_habitaciones"
+                        android:layout_marginStart="10dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvDormitoriosNumero"
+
+                        tools:text="3"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvCapacidad"
+
+                        android:text="@string/string_personas"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvCapacidadNumero"
+
+                        tools:text="2"
+
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvPiscina"
+
+                android:text="@string/string_piscina"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvIsPiscina"
+
+                tools:text="SI"
+                android:layout_marginStart="10dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+    <!--
+        ************************
+               VALORACIÓN
+        ************************
+    -->
+    <TextView
+        android:id="@+id/tvvalorar"
+
+        android:text="@string/valorar"
+        android:textStyle="bold"
+        android:textSize="15sp"
+
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TableLayout"
+        app:layout_constraintBottom_toTopOf="@id/LinearLayout"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+
+        android:orientation="horizontal"
+
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvvalorar"
+        app:layout_constraintBottom_toTopOf="@id/bt_reservar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvValoracionMedia"
+
+                android:textSize="20sp"
+
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:text="5" />
+
+            <ImageView
+                android:src="@drawable/estrella2"
+
+                android:layout_gravity="center"
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+        </LinearLayout>
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+
+            android:layout_gravity="center"
+            android:progressTint="@color/black"
+
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="2"
+            android:stepSize="0.05"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!--
+        ************************
+            BOTÓN RESERVAR
+        ************************
+    -->
+    <Button
+        android:id="@+id/bt_reservar"
+
+        android:padding="25dp"
+
+        android:text="@string/string_botonReservar"
+        android:backgroundTint="@color/Verde"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

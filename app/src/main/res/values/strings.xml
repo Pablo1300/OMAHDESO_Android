@@ -1,0 +1,127 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">OMAHDESO</string>
+    <!-- Strings related to login -->
+    <string name="welcome">Bienvenido</string>
+    <string name="invalid_username">No es valido el usuario</string>
+    <string name="invalid_password">La contraseña debe tener más de 5 caracteres</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="msg_registrarse">¿Aún no te has registrado?      Regístrate</string>
+    <string name="empresa" translatable="false">OMAHDESO</string>
+    <string name="string_lbRegistrarse">Regístrate para iniciar sesión</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="contrasenna">Contraseña</string>
+    <string name="stringRegistrarse">Registrarse</string>
+    <string name="stringRepContrasenna">Repetir contraseña</string>
+    <string name="stringIconoAtras">Botón atrás</string>
+    <string name="string_reservar">Reservar</string>
+    <string name="string_datosReserva">Datos necesarios para la reserva</string>
+    <string name="string_nombre">Nombre</string>
+    <string name="string_apellidos">Apellidos</string>
+    <string name="string_dni">DNI</string>
+    <string name="string_confMayor18">Confirmo que soy mayor de 18 años *</string>
+    <string name="string_condiciones">He leído y acepto las condiciones y servicios de la reserva *</string>
+    <string name="string_fechaEntr">Fecha de entrada</string>
+    <string name="string_fechSalida">Fecha de salida</string>
+    <string name="string_telefono">Teléfono</string>
+    <string name="string_logoEmpresa" translatable="false">LOGO EMPRESA</string>
+    <string name="pregunta">¿Dónde nos vamos?</string>
+    <string name="titulo">¿Dónde nos vamos?</string>
+    <string name="valorar">Valorar</string>
+    <string name="piscina">Piscina</string>
+    <string name="ReservaConfirmada">Reserva confirmada </string>
+    <string name="numReserva">Numero de la reserva:</string>
+    <string name="fechaEntrada">Fecha de Entrada:</string>
+    <string name="fechaSalida">Fecha Salida:</string>
+    <string name="reservasConfirmadas">Reservas confirmadas</string>
+    <string name="string_errorEmail">Introduce una dirección de email válida</string>
+    <string name="string_errorContrasenna">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="string_errorRepContrasenna">La contraseña introducida es diferente</string>
+    <string name="string_errorIniciarSesion">Email o contraseña incorrectos</string>
+    <string name="string_errorRegistrarse">El usuario introducido se encuentra ya registrado</string>
+    <string name="mis_reservas">Mis reservas</string>
+    <string name="string_eurosXnoche">€/noche</string>
+    <string name="string_errorMenor1">El número introducido debe ser al menos 1</string>
+    <string name="string_errorMayor70">Solo disponibles casas de hasta 70 personas</string>
+    <string name="string_errorMayor30">Solo disponibles casas de hasta 30 camas</string>
+    <string name="string_errorNoNum">Inserte un número en este campo</string>
+    <string name="string_errorNombre">Inserte un nombre en este campo</string>
+    <string name="string_errorApellidos">Inserte apellidos en este campo</string>
+    <string name="string_errorDNI">Introduce un DNI válido</string>
+    <string name="string_errorTelefono">Introduce un número de teléfono válido</string>
+    <string name="string_errorFormatoFech">Formato fecha no válido</string>
+    <string name="string_errorFechEntrada">Fecha de entrada no disponible</string>
+    <string name="string_errorFechSalida">Fecha de salida no disponible</string>
+    <string name="string_errorIsMayor18">Debe confirmar que es mayor de edad</string>
+    <string name="string_errorIsCondiciones">Debe confirmar que acepta las condiciones</string>
+    <string name="string_0" translatable="false">0</string>
+    <string name="string_botonReservar">RESERVAR</string>
+    <string name="string_cancelarReserva">Cancelar reserva</string>
+    <string name="string_estancia2p">Estancia:</string>
+    <string name="string_nombrecasarural">Nombre Casa Rural</string>
+    <string name="string_codigoreserva">Código reserva:</string>
+    <string name="string_preciototal">Precio Total:</string>
+    <string name="string_euros" translatable="false">€</string>
+    <string name="string_apellidos2p">Apellidos:</string>
+    <string name="string_nombre2p">Nombre:</string>
+    <string name="string_dni2p" translatable="false">DNI:</string>
+    <string name="string_telefono2p">Teléfono:</string>
+    <string name="string_piscina">Piscina</string>
+    <string name="string_visionGeneral">Visión General</string>
+    <string name="string_habitaciones">Habitaciones</string>
+    <string name="string_personas">Personas</string>
+    <string name="string_botonMisReservas">MIS RESERVAS</string>
+    <string-array name="arraySpinner">
+        <item>- Selecciona una ciudad -</item>
+        <item>A Coruña</item>
+        <item>Álava</item>
+        <item>Albacete</item>
+        <item>Alicante</item>
+        <item>Almería</item>
+        <item>Asturias</item>
+        <item>Ávila</item>
+        <item>Badajoz</item>
+        <item>Baleares</item>
+        <item>Barcelona</item>
+        <item>Burgos</item>
+        <item>Cáceres</item>
+        <item>Cantabria</item>
+        <item>Castellón</item>
+        <item>Ciudad Real</item>
+        <item>Córdoba</item>
+        <item>Cuenca</item>
+        <item>Girona</item>
+        <item>Granada</item>
+        <item>Guadalajara</item>
+        <item>Gipuzkoa</item>
+        <item>Huelva</item>
+        <item>Huesca</item>
+        <item>Jaén</item>
+        <item>La Rioja</item>
+        <item>Las Palmas</item>
+        <item>León</item>
+        <item>Lérida</item>
+        <item>Lugo</item>
+        <item>Madrid</item>
+        <item>Málaga</item>
+        <item>Murcia</item>
+        <item>Navarra</item>
+        <item>Ourense</item>
+        <item>Palencia</item>
+        <item>Pontevedra</item>
+        <item>Salamanca</item>
+        <item>Segovia</item>
+        <item>Sevilla</item>
+        <item>Soria</item>
+        <item>Tarragona</item>
+        <item>Santa Cruz de Tenerife</item>
+        <item>Teruel</item>
+        <item>Toledo</item>
+        <item>Valencia</item>
+        <item>Valladolid</item>
+        <item>Vizcaya</item>
+        <item>Zamora</item>
+        <item>Zaragoza</item>
+    </string-array>
+
+</resources>

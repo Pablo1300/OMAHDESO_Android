@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MisReservas.MisReservasActivity">
+
+    <!--
+       ************************
+             BOTÓN ATRÁS
+       ************************
+    -->
+    <ImageView
+        android:id="@+id/btAtras"
+        android:src="@drawable/galonizquierdo"
+
+        android:contentDescription="@string/stringIconoAtras"
+
+        android:layout_marginStart="-6dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <!--
+       ************************
+           TITULO //RESERVAS
+       ************************
+    -->
+    <TextView
+        android:id="@+id/tvReservas"
+
+        android:text="@string/reservasConfirmadas"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/Azul"
+
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/btAtras"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btAtras"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <!--
+       ************************************************
+             RECYCLERVIEW DE LAS RESERVAS CONFIRMADAS
+       ************************************************
+    -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_misReservas"
+        tools:listitem="@layout/item_reservas"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btAtras"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

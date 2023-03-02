@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerActivityLogin"
+    android:padding="16dp"
+    tools:context=".Login.LoginActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    *****************
+          LOGO
+    *****************
+   -->
+    <ImageView
+        android:id="@+id/logo_empresa"
+
+        android:contentDescription="@string/string_logoEmpresa"
+        android:src="@drawable/logogrande"
+
+        app:layout_constraintBottom_toTopOf="@id/conjunto_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <!--
+     *************************
+         RECOGIDA DE DATOS
+     *************************
+   -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conjunto_login"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0.7">
+
+
+        <EditText
+            android:id="@+id/username"
+
+            android:padding="15dp"
+
+            android:autofillHints="emailAddress"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+
+            android:background="@drawable/rectangulo"
+
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/password"
+
+            android:padding="15dp"
+
+            android:layout_marginTop="8dp"
+            android:autofillHints="password"
+            android:hint="@string/contrasenna"
+            android:imeActionLabel="@string/iniciar_sesion"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+
+            android:background="@drawable/rectangulo"
+
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btLogin"
+
+            android:layout_gravity="start"
+            android:layout_marginTop="20dp"
+
+            android:backgroundTint="@color/Verde"
+            android:text="@string/iniciar_sesion"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/tv_noRegistrado"
+
+            android:layout_marginTop="5dp"
+
+            android:text="@string/msg_registrarse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btLogin"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    *************************
+     MENSAJE ERROR EMERGENTE
+    *************************
+  -->
+
+    <TextView
+        android:id="@+id/tv_errorIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="15sp"
+
+        app:layout_constraintBottom_toTopOf="@id/nomEmpresa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conjunto_login" />
+
+
+    <!--
+     *************************
+         NOMBRE DE MARCA
+     *************************
+   -->
+    <TextView
+        android:id="@+id/nomEmpresa"
+
+        android:text="@string/empresa"
+
+        android:textColor="@color/Azul"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

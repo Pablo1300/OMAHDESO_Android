@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VistaReserva.VistaReservaActivity">
+
+    <!--
+        ************************
+           LOGO Y MARCA SIMPLES
+        ************************
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conjuntoEmpresa"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/nomEmpresa"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="5dp"
+            android:text="@string/empresa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo_empresa"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo_empresa"
+            android:src="@drawable/logosimple"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/string_logoEmpresa" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+        ************************
+              BOTÓN ATRÁS
+        ************************
+    -->
+
+    <ImageView
+        android:id="@+id/btAtras"
+        android:src="@drawable/galonizquierdo"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+    <!--
+        *****************************
+              NOMBRE CASA RURAL
+        *****************************
+    -->
+
+    <TextView
+        android:id="@+id/tvNombreCasaRural"
+
+        tools:text="Nombre Casa Rural"
+        android:textColor="@color/Azul"
+        android:lines="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:minLines="1"
+
+        app:layout_constraintStart_toEndOf="@id/conjunto_datos"
+        app:layout_constraintBottom_toTopOf="@id/conjunto_codigo"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--
+        **********************************
+              CONJUNTO CÓDIGO RESERVA
+        **********************************
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conjunto_codigo"
+
+        android:layout_marginBottom="13dp"
+
+        app:layout_constraintStart_toEndOf="@id/conjunto_datos"
+        app:layout_constraintBottom_toTopOf="@id/btEliminar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvCodReserva"
+
+            android:text="@string/string_codigoreserva"
+            android:textColor="@color/Azul"
+            android:textSize="17sp"
+            android:textStyle="bold"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvNumCodReserva"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvNumCodReserva"
+
+            android:textColor="@color/Azul"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:text="CÓDIGO"
+
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCodReserva"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+            *******************************
+                  TABLA DATOS RESERVA
+            *******************************
+     -->
+    <TableLayout
+        android:id="@+id/conjunto_datos"
+
+        android:background="@drawable/rectangulo2"
+        android:padding="10dp"
+        android:layout_marginHorizontal="25dp"
+
+        app:layout_constraintStart_toEndOf="@id/btAtras"
+        app:layout_constraintTop_toBottomOf="@id/btAtras"
+        app:layout_constraintBottom_toTopOf="@id/btEliminar"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvLabelNombre"
+
+                android:padding="10dp"
+                android:text="@string/string_nombre2p"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvNombre"
+
+                tools:text="NOMBRE"
+                android:padding="10dp"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvLabelApellidos"
+
+                android:padding="10dp"
+                android:text="@string/string_apellidos2p"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvApellidos"
+
+                android:padding="10dp"
+                tools:text="APELLIDOS APELLIDOS"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvLabelDNI"
+
+                android:padding="10dp"
+                android:text="@string/string_dni2p"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDNI"
+
+                android:padding="10dp"
+                tools:text="70944876J"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvLabelTelefono"
+
+                android:padding="10dp"
+                android:text="@string/string_telefono2p"
+                android:textSize="15sp"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvTelefono"
+
+                android:padding="10dp"
+                tools:text="659084958"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvLabelEstancia"
+
+                android:padding="10dp"
+                android:text="@string/string_estancia2p"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvEstancia"
+
+                android:padding="10dp"
+                tools:text="1/1/2022 - 2/2/2022"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <!--
+        *********************************
+              CONJUNTO PRECIO TOTAL
+        *********************************
+    -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/conjunto_codigo"
+        app:layout_constraintBottom_toTopOf="@id/btEliminar"
+        app:layout_constraintStart_toEndOf="@id/conjunto_datos"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvTotalPagar"
+
+            android:text="@string/string_preciototal"
+            android:textSize="25sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvTotalPagarNum"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvTotalPagarNum"
+
+            tools:text="200"
+            android:textSize="25sp"
+
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/tvTotalPagar"
+            app:layout_constraintEnd_toStartOf="@id/tvEuros"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvEuros"
+
+            android:text="@string/string_euros"
+            android:textSize="25sp"
+
+            app:layout_constraintStart_toEndOf="@id/tvTotalPagarNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+           *************************
+                BOTÓN CANCELAR
+           *************************
+       -->
+    <Button
+        android:id="@+id/btEliminar"
+
+        android:padding="25dp"
+
+        android:text="@string/string_cancelarReserva"
+        android:backgroundTint="@color/Verde"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

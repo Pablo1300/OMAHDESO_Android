@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerActivityRegister"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register.RegisterActivity">
+
+    <!--
+       ************************
+                 GUÍAS
+       ************************
+    -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--
+    ************************
+           BOTÓN ATRÁS
+    ************************
+    -->
+    <ImageView
+        android:id="@+id/btAtras"
+        android:src="@drawable/galonizquierdo"
+
+        android:contentDescription="@string/stringIconoAtras"
+
+        android:layout_marginStart="-6dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <!--
+    ************************
+          LOGO GRANDE
+    ************************
+    -->
+    <ImageView
+        android:id="@+id/logo_empresa"
+
+        android:contentDescription="@string/string_logoEmpresa"
+        android:src="@drawable/logogrande"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <!--
+    ************************
+      INTRODUCCIÓN DE DATOS
+    ************************
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conjunto_register"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.5">
+
+        <TextView
+            android:id="@+id/lbRegistrarse"
+
+            android:text="@string/string_lbRegistrarse"
+            android:textSize="25sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+
+            android:autofillHints="emailAddress"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+
+            android:background="@drawable/rectangulo"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbRegistrarse"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etContrasenna"
+
+            android:padding="15dp"
+            android:layout_marginTop="8dp"
+
+            android:autofillHints="password"
+            android:hint="@string/contrasenna"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+
+            android:background="@drawable/rectangulo"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etEmail"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etRepContrasenna"
+
+            android:padding="15dp"
+            android:layout_marginTop="8dp"
+
+            android:autofillHints="password"
+            android:hint="@string/stringRepContrasenna"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+
+            android:background="@drawable/rectangulo"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etContrasenna"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btRegistrarse"
+
+            android:layout_gravity="start"
+            android:layout_marginTop="20dp"
+
+            android:textColor="@color/black"
+            android:backgroundTint="@color/Verde"
+
+            android:text="@string/stringRegistrarse"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRepContrasenna"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    *************************
+     MENSAJE ERROR EMERGENTE
+    *************************
+  -->
+
+    <TextView
+        android:id="@+id/tv_errorRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="15sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide"
+        app:layout_constraintTop_toBottomOf="@id/conjunto_register" />
+</androidx.constraintlayout.widget.ConstraintLayout>

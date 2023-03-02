@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.upsa.papps.v2021.ejemplo_login">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".OmahdesoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainCasaRural.MainActivityCasaRural"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".VistaCasaRural.VistaCasaRuralActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Register.RegisterActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".MisReservas.MisReservasActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Reserve.ReserveActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".VistaReserva.VistaReservaActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+
+        <activity
+            android:name=".Login.LoginActivity"
+            android:exported="true"
+            android:label="@string/empresa">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
