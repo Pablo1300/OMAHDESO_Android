@@ -13,3 +13,9 @@ This is the color palette, it combines with the app's principal logo and with th
 <img src=/Screenshots/IMG1.png alt="Color Palette" width="300"/> <img src=/Screenshots/IMG2.png alt="Color Palette" width="300"/>
 <img src=/Screenshots/IMG3.png alt="Color Palette" width="300"/> <img src=/Screenshots/IMG4.png alt="Color Palette" width="300"/>
 <img src=/Screenshots/IMG5.png alt="Color Palette" width="300"/> <img src=/Screenshots/IMG6.png alt="Color Palette" width="300"/>
+
+## Execution
+
+I have done all the tests on Android Studio using the following smartphones:
+- Pixel 2 API 28
+- Pixel 4 API 28
